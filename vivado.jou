@@ -1,0 +1,91 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Apr  6 10:04:13 2021
+# Process ID: 2910
+# Current directory: /tools/Xilinx/Vivado/2019.2/bin
+# Command line: vivado
+# Log file: /tools/Xilinx/Vivado/2019.2/bin/vivado.log
+# Journal file: /tools/Xilinx/Vivado/2019.2/bin/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /tools/Xilinx/Vivado/2019.2/bin/RISC-V/RISC-V.xpr
+update_compile_order -fileset sources_1
+create_run synth_2 -flow {Vivado Synthesis 2019} -strategy {Vivado Synthesis Defaults} -report_strategy {Vivado Synthesis Default Reports}
+current_run [get_runs synth_2]
+set_property board_part digilentinc.com:zedboard:part0:1.0 [current_project]
+launch_runs impl_2 -jobs 8
+wait_on_run impl_2
+reset_run synth_2
+close [ open /tools/Xilinx/Vivado/2019.2/bin/RISC-V/RISC-V.srcs/constrs_1/new/zedboard.xdc w ]
+add_files -fileset constrs_1 /tools/Xilinx/Vivado/2019.2/bin/RISC-V/RISC-V.srcs/constrs_1/new/zedboard.xdc
+set_property is_enabled false [get_files  /tools/Xilinx/Vivado/2019.2/bin/RISC-V/RISC-V.srcs/constrs_1/new/zybo.xdc]
+launch_runs impl_2 -jobs 8
+wait_on_run impl_2
+set_property used_in_implementation false [get_files  /tools/Xilinx/Vivado/2019.2/bin/RISC-V/RISC-V.srcs/constrs_1/new/zybo.xdc]
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+archive_project /home/smart/Desktop/RISC-V_wally.xpr.zip -force -include_local_ip_cache
+open_run impl_2
+open_run synth_2 -name synth_2
+reset_run impl_2
+launch_runs impl_2 -jobs 8
+wait_on_run impl_2
+close_design
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property SEVERITY {Warning} [get_drc_checks LUTLP-1]
+set_property IS_ENABLED 0 [get_drc_checks {CSCL-1}]
+write_bitstream RISC-V.bit
+close_design
+write_bitstream RISC-V.bit
+reset_run synth_2
+launch_runs impl_2 -jobs 8
+wait_on_run impl_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+reset_run impl_2 -prev_step 
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+launch_runs impl_2 -jobs 8
+wait_on_run impl_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+open_run impl_2
+reset_run impl_2 -prev_step 
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+close_design
+close_project
+open_project /home/smart/Documents/FPGA_10NOV/FPGA_10NOV.xpr
+update_compile_order -fileset sources_1
+create_run impl_2 -parent_run synth_1 -flow {Vivado Implementation 2019} -strategy {Vivado Implementation Defaults} -report_strategy {Vivado Implementation Default Reports}
+current_run [get_runs impl_2]
+set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
+reset_run synth_1
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+upgrade_ip -srcset clk_wiz_0 -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_wiz_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips clk_wiz_0] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_2 -jobs 8
+wait_on_run impl_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+archive_project /home/smart/Documents/FPGA_10NOV1.xpr.zip -force -include_local_ip_cache -include_config_settings

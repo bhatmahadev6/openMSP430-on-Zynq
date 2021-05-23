@@ -1,0 +1,992 @@
+
+*** Running vivado
+    with args -log top_fpga.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_fpga.tcl -notrace
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source top_fpga.tcl -notrace
+Command: link_design -top top_fpga -part xc7z010clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_fpga_generator'
+INFO: [Project 1-454] Reading design checkpoint '/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.dcp' for cell 'xadc_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2123.500 ; gain = 0.000 ; free physical = 1128 ; free virtual = 4196
+INFO: [Netlist 29-17] Analyzing 2106 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'xadc_inst/inst'
+Finished Parsing XDC File [/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'xadc_inst/inst'
+Parsing XDC File [/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_fpga_generator/inst'
+Finished Parsing XDC File [/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_fpga_generator/inst'
+Parsing XDC File [/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_fpga_generator/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2440.344 ; gain = 292.977 ; free physical = 619 ; free virtual = 3702
+Finished Parsing XDC File [/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_fpga_generator/inst'
+Parsing XDC File [/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.srcs/constrs_1/imports/IIsc files/ZYBO.xdc]
+Finished Parsing XDC File [/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.srcs/constrs_1/imports/IIsc files/ZYBO.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2440.344 ; gain = 0.000 ; free physical = 639 ; free virtual = 3722
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+11 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2440.344 ; gain = 316.988 ; free physical = 639 ; free virtual = 3722
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2472.359 ; gain = 32.016 ; free physical = 629 ; free virtual = 3712
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: fbc681bf
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.68 . Memory (MB): peak = 2493.172 ; gain = 20.812 ; free physical = 612 ; free virtual = 3695
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1c757b72c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2639.141 ; gain = 0.000 ; free physical = 469 ; free virtual = 3553
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 23 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 12e03dbba
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2639.141 ; gain = 0.000 ; free physical = 469 ; free virtual = 3553
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 126ae1a1f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2639.141 ; gain = 0.000 ; free physical = 464 ; free virtual = 3548
+INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 126ae1a1f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2639.141 ; gain = 0.000 ; free physical = 464 ; free virtual = 3548
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 126ae1a1f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2639.141 ; gain = 0.000 ; free physical = 464 ; free virtual = 3548
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 17f12eaeb
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2639.141 ; gain = 0.000 ; free physical = 464 ; free virtual = 3548
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |              23  |                                              1  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               2  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2639.141 ; gain = 0.000 ; free physical = 464 ; free virtual = 3548
+Ending Logic Optimization Task | Checksum: 14c6c6d0e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2639.141 ; gain = 0.000 ; free physical = 464 ; free virtual = 3548
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 7 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 14
+Ending PowerOpt Patch Enables Task | Checksum: 14c6c6d0e
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2846.953 ; gain = 0.000 ; free physical = 431 ; free virtual = 3520
+Ending Power Optimization Task | Checksum: 14c6c6d0e
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2846.953 ; gain = 207.812 ; free physical = 445 ; free virtual = 3534
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 14c6c6d0e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2846.953 ; gain = 0.000 ; free physical = 445 ; free virtual = 3534
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2846.953 ; gain = 0.000 ; free physical = 445 ; free virtual = 3534
+Ending Netlist Obfuscation Task | Checksum: 14c6c6d0e
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2846.953 ; gain = 0.000 ; free physical = 445 ; free virtual = 3534
+INFO: [Common 17-83] Releasing license: Implementation
+35 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 2846.953 ; gain = 406.609 ; free physical = 445 ; free virtual = 3534
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2846.953 ; gain = 0.000 ; free physical = 444 ; free virtual = 3535
+INFO: [Common 17-1381] The checkpoint '/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.runs/impl_2/top_fpga_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_fpga_drc_opted.rpt -pb top_fpga_drc_opted.pb -rpx top_fpga_drc_opted.rpx
+Command: report_drc -file top_fpga_drc_opted.rpt -pb top_fpga_drc_opted.pb -rpx top_fpga_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.runs/impl_2/top_fpga_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_data_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_data_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_data_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_bw_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_dest_bin_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_dest_bin_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_dext_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_dext_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_dext_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/clock_module_0/sync_cell_cpu_en/data_sync_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/dbg_0/dbg_uart_0/dbg_addr_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_data_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_data_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_data_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_start_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_startb_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_alu_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_alu_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_alu_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/GPIO/p1ifg_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 42 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 420 ; free virtual = 3513
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 14841e73a
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 420 ; free virtual = 3513
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 420 ; free virtual = 3513
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/acc_sel_i_2' is driving clock pin of 18 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/multiplier_0/acc_sel_reg {FDCE}
+	top_digital_inst/CORE/multiplier_0/op1_reg[0] {FDCE}
+	top_digital_inst/CORE/multiplier_0/op1_reg[10] {FDCE}
+	top_digital_inst/CORE/multiplier_0/op1_reg[11] {FDCE}
+	top_digital_inst/CORE/multiplier_0/op1_reg[12] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/reslo[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/multiplier_0/reslo_reg[0] {FDCE}
+	top_digital_inst/CORE/multiplier_0/reslo_reg[10] {FDCE}
+	top_digital_inst/CORE/multiplier_0/reslo_reg[11] {FDCE}
+	top_digital_inst/CORE/multiplier_0/reslo_reg[12] {FDCE}
+	top_digital_inst/CORE/multiplier_0/reslo_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/op2[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/multiplier_0/op2_reg[0] {FDCE}
+	top_digital_inst/CORE/multiplier_0/op2_reg[10] {FDCE}
+	top_digital_inst/CORE/multiplier_0/op2_reg[11] {FDCE}
+	top_digital_inst/CORE/multiplier_0/op2_reg[12] {FDCE}
+	top_digital_inst/CORE/multiplier_0/op2_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/irq_num[3]_i_2' is driving clock pin of 4 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/frontend_0/irq_num_reg[0] {FDPE}
+	top_digital_inst/CORE/frontend_0/irq_num_reg[2] {FDPE}
+	top_digital_inst/CORE/frontend_0/irq_num_reg[1] {FDPE}
+	top_digital_inst/CORE/frontend_0/irq_num_reg[3] {FDPE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/mdb_in_buf[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[13] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[14] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[11] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/inst_dext[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/frontend_0/inst_dext_reg[0] {FDCE}
+	top_digital_inst/CORE/frontend_0/inst_dext_reg[10] {FDCE}
+	top_digital_inst/CORE/frontend_0/inst_dext_reg[11] {FDCE}
+	top_digital_inst/CORE/frontend_0/inst_dext_reg[12] {FDCE}
+	top_digital_inst/CORE/frontend_0/inst_dext_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/inst_sext[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/frontend_0/inst_sext_reg[2] {FDCE}
+	top_digital_inst/CORE/frontend_0/inst_sext_reg[3] {FDCE}
+	top_digital_inst/CORE/frontend_0/inst_sext_reg[4] {FDCE}
+	top_digital_inst/CORE/frontend_0/inst_sext_reg[5] {FDCE}
+	top_digital_inst/CORE/frontend_0/inst_sext_reg[6] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/mdb_out_nxt[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[11] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[12] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/pc[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/frontend_0/pc_reg[2] {FDCE}
+	top_digital_inst/CORE/frontend_0/pc_reg[5] {FDCE}
+	top_digital_inst/CORE/frontend_0/pc_reg[9] {FDCE}
+	top_digital_inst/CORE/frontend_0/pc_reg[4] {FDCE}
+	top_digital_inst/CORE/frontend_0/pc_reg[15] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r10[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[14] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[15] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[1] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[2] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[3] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r11[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[11] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[12] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r12[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[11] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[13] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[14] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r13[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[11] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[12] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[13] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[14] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r15[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[2] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[4] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[5] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[6] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[7] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/pmem_dout_bckup[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[0] {FDCE}
+	top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[10] {FDCE}
+	top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[11] {FDCE}
+	top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[12] {FDCE}
+	top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r14[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[12] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[13] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[14] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/wdtctl[7]_i_1' is driving clock pin of 5 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/watchdog_0/wdtctl_reg[0] {FDCE}
+	top_digital_inst/CORE/watchdog_0/wdtctl_reg[1] {FDCE}
+	top_digital_inst/CORE/watchdog_0/wdtctl_reg[4] {FDCE}
+	top_digital_inst/CORE/watchdog_0/wdtctl_reg[6] {FDCE}
+	top_digital_inst/CORE/watchdog_0/wdtctl_reg[7] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/reshi[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/multiplier_0/reshi_reg[0] {FDCE}
+	top_digital_inst/CORE/multiplier_0/reshi_reg[10] {FDCE}
+	top_digital_inst/CORE/multiplier_0/reshi_reg[11] {FDCE}
+	top_digital_inst/CORE/multiplier_0/reshi_reg[12] {FDCE}
+	top_digital_inst/CORE/multiplier_0/reshi_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r1[15]_i_2' is driving clock pin of 15 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[11] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[12] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[13] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[14] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r2[8]_i_2' is driving clock pin of 9 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[1] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[3] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[4] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[5] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r3[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[11] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[12] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r4[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[11] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[12] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r5[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[11] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[12] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r6[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[11] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[12] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r7[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[11] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[12] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r8[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[11] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[12] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r9[15]_i_2' is driving clock pin of 16 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[0] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[10] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[11] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[12] {FDCE}
+	top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[13] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/CORE/clock_module_0/clock_gate_smclk/wdtisx_s[1]_i_1' is driving clock pin of 22 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/watchdog_0/wdt_evt_toggle_reg {FDCE}
+	top_digital_inst/CORE/watchdog_0/wdtcnt_reg[0] {FDCE}
+	top_digital_inst/CORE/watchdog_0/wdtcnt_reg[10] {FDCE}
+	top_digital_inst/CORE/watchdog_0/wdtcnt_reg[11] {FDCE}
+	top_digital_inst/CORE/watchdog_0/wdtcnt_reg[12] {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/clk_divider/data_sync[1]_i_1' is driving clock pin of 23 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/clock_module_0/dbg_rst_noscan_reg {FDPE}
+	top_digital_inst/CORE/frontend_0/inst_bw_reg {FDCE}
+	top_digital_inst/CORE/frontend_0/inst_irq_rst_reg {FDPE}
+	top_digital_inst/CORE/frontend_0/pmem_busy_reg {FDCE}
+	top_digital_inst/CORE/execution_unit_0/mab_lsb_reg {FDCE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/clk_divider/data_sync[1]_i_1__0' is driving clock pin of 7 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/CORE/watchdog_0/sync_cell_wdtcnt_clr/data_sync_reg[0] {FDCE}
+	top_digital_inst/CORE/watchdog_0/sync_cell_wdtcnt_clr/data_sync_reg[1] {FDCE}
+	top_digital_inst/CORE/watchdog_0/sync_cell_wdtcnt_incr/data_sync_reg[0] {FDCE}
+	top_digital_inst/CORE/watchdog_0/sync_cell_wdtcnt_incr/data_sync_reg[1] {FDCE}
+	top_digital_inst/CORE/watchdog_0/sync_reset_por/data_sync_reg[0] {FDPE}
+WARNING: [Place 30-568] A LUT 'top_digital_inst/clk_divider/pwm_out_i_2' is driving clock pin of 17 registers. This could lead to large hold time violations. First few involved registers are:
+	top_digital_inst/PWM/counter_reg[0] {FDCE}
+	top_digital_inst/PWM/counter_reg[10] {FDCE}
+	top_digital_inst/PWM/counter_reg[11] {FDCE}
+	top_digital_inst/PWM/counter_reg[12] {FDCE}
+	top_digital_inst/PWM/counter_reg[13] {FDCE}
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 189920cdf
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 373 ; free virtual = 3470
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 20a30acaf
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 375 ; free virtual = 3473
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 20a30acaf
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 375 ; free virtual = 3473
+Phase 1 Placer Initialization | Checksum: 20a30acaf
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 375 ; free virtual = 3473
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1ec4bf189
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 371 ; free virtual = 3469
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 363 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 158 nets or cells. Created 0 new cell, deleted 158 existing cells and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 347 ; free virtual = 3447
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            158  |                   158  |           0  |           1  |  00:00:01  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            158  |                   158  |           0  |           3  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1ca15216e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:17 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 347 ; free virtual = 3448
+Phase 2.2 Global Placement Core | Checksum: 1b7f61163
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:18 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 344 ; free virtual = 3445
+Phase 2 Global Placement | Checksum: 1b7f61163
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:18 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 352 ; free virtual = 3453
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 19431f670
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:18 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 352 ; free virtual = 3453
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1ae95d6d2
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 351 ; free virtual = 3452
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1e5c18a47
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 351 ; free virtual = 3452
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 19511919e
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 351 ; free virtual = 3452
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 145bccb0b
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:26 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 332 ; free virtual = 3434
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 20ddd2b0c
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:28 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 333 ; free virtual = 3435
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 21f6d338f
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:28 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 333 ; free virtual = 3435
+Phase 3 Detail Placement | Checksum: 21f6d338f
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:28 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 333 ; free virtual = 3435
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 2687ef15d
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=6.320 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 19248f7e5
+
+Time (s): cpu = 00:00:00.81 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 323 ; free virtual = 3425
+INFO: [Place 46-33] Processed net top_digital_inst/CORE/clock_module_0/sync_cell_puc/AR[0], BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1824eb795
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.88 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 323 ; free virtual = 3425
+Phase 4.1.1.1 BUFG Insertion | Checksum: 2687ef15d
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:33 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 323 ; free virtual = 3425
+INFO: [Place 30-746] Post Placement Timing Summary WNS=6.320. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 242556cdf
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:33 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 323 ; free virtual = 3425
+Phase 4.1 Post Commit Optimization | Checksum: 242556cdf
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:33 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 323 ; free virtual = 3425
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 242556cdf
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:33 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 323 ; free virtual = 3425
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 242556cdf
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:33 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 323 ; free virtual = 3425
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 323 ; free virtual = 3425
+Phase 4.4 Final Placement Cleanup | Checksum: 28d9384cf
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:34 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 323 ; free virtual = 3425
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 28d9384cf
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:34 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 323 ; free virtual = 3425
+Ending Placer Task | Checksum: 1c96249b1
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:34 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 323 ; free virtual = 3425
+INFO: [Common 17-83] Releasing license: Implementation
+70 Infos, 73 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:04 ; elapsed = 00:00:36 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 337 ; free virtual = 3438
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 293 ; free virtual = 3422
+INFO: [Common 17-1381] The checkpoint '/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.runs/impl_2/top_fpga_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file top_fpga_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 319 ; free virtual = 3427
+INFO: [runtcl-4] Executing : report_utilization -file top_fpga_utilization_placed.rpt -pb top_fpga_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_fpga_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 324 ; free virtual = 3432
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+79 Infos, 73 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2857.969 ; gain = 0.000 ; free physical = 245 ; free virtual = 3380
+INFO: [Common 17-1381] The checkpoint '/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.runs/impl_2/top_fpga_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: da607f4c ConstDB: 0 ShapeSum: ef01ca65 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: e3a42cf6
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 2862.871 ; gain = 4.902 ; free physical = 193 ; free virtual = 3309
+Post Restoration Checksum: NetGraph: 19ef7105 NumContArr: c9b4bbf1 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: e3a42cf6
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 2862.871 ; gain = 4.902 ; free physical = 201 ; free virtual = 3317
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: e3a42cf6
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 2862.871 ; gain = 4.902 ; free physical = 184 ; free virtual = 3301
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: e3a42cf6
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 2862.871 ; gain = 4.902 ; free physical = 184 ; free virtual = 3301
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: c5522f19
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:16 . Memory (MB): peak = 2862.871 ; gain = 4.902 ; free physical = 167 ; free virtual = 3284
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.178  | TNS=0.000  | WHS=-0.166 | THS=-5.152 |
+
+Phase 2 Router Initialization | Checksum: 947bbedc
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:17 . Memory (MB): peak = 2862.871 ; gain = 4.902 ; free physical = 175 ; free virtual = 3284
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.122044 %
+  Global Horizontal Routing Utilization  = 0.162684 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 16369
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 16366
+  Number of Partially Routed Nets     = 3
+  Number of Node Overlaps             = 67
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1d9cbd9ea
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:21 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 175 ; free virtual = 3282
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 4204
+ Number of Nodes with overlaps = 62
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.627  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 211d1298c
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:33 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 167 ; free virtual = 3274
+Phase 4 Rip-up And Reroute | Checksum: 211d1298c
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:33 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 167 ; free virtual = 3274
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 211d1298c
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:33 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 167 ; free virtual = 3274
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 211d1298c
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:33 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 167 ; free virtual = 3274
+Phase 5 Delay and Skew Optimization | Checksum: 211d1298c
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:33 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 167 ; free virtual = 3274
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 172bb7796
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:33 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 167 ; free virtual = 3274
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.742  | TNS=0.000  | WHS=0.090  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 172bb7796
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:34 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 167 ; free virtual = 3274
+Phase 6 Post Hold Fix | Checksum: 172bb7796
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:34 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 167 ; free virtual = 3274
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 14.0175 %
+  Global Horizontal Routing Utilization  = 19.386 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 172bb7796
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:34 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 167 ; free virtual = 3274
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 172bb7796
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:34 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 165 ; free virtual = 3273
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: f7f0a8c2
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:36 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 166 ; free virtual = 3273
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=6.742  | TNS=0.000  | WHS=0.090  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: f7f0a8c2
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:36 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 166 ; free virtual = 3273
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:36 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 189 ; free virtual = 3296
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+93 Infos, 73 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:18 ; elapsed = 00:00:39 . Memory (MB): peak = 2877.188 ; gain = 19.219 ; free physical = 188 ; free virtual = 3296
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2885.191 ; gain = 0.000 ; free physical = 142 ; free virtual = 3285
+INFO: [Common 17-1381] The checkpoint '/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.runs/impl_2/top_fpga_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_fpga_drc_routed.rpt -pb top_fpga_drc_routed.pb -rpx top_fpga_drc_routed.rpx
+Command: report_drc -file top_fpga_drc_routed.rpt -pb top_fpga_drc_routed.pb -rpx top_fpga_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.runs/impl_2/top_fpga_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file top_fpga_methodology_drc_routed.rpt -pb top_fpga_methodology_drc_routed.pb -rpx top_fpga_methodology_drc_routed.rpx
+Command: report_methodology -file top_fpga_methodology_drc_routed.rpt -pb top_fpga_methodology_drc_routed.pb -rpx top_fpga_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.runs/impl_2/top_fpga_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 2934.887 ; gain = 0.000 ; free physical = 149 ; free virtual = 3266
+INFO: [runtcl-4] Executing : report_power -file top_fpga_power_routed.rpt -pb top_fpga_power_summary_routed.pb -rpx top_fpga_power_routed.rpx
+Command: report_power -file top_fpga_power_routed.rpt -pb top_fpga_power_summary_routed.pb -rpx top_fpga_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+106 Infos, 74 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 2944.793 ; gain = 9.906 ; free physical = 142 ; free virtual = 3228
+INFO: [runtcl-4] Executing : report_route_status -file top_fpga_route_status.rpt -pb top_fpga_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file top_fpga_timing_summary_routed.rpt -pb top_fpga_timing_summary_routed.pb -rpx top_fpga_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file top_fpga_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file top_fpga_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_fpga_bus_skew_routed.rpt -pb top_fpga_bus_skew_routed.pb -rpx top_fpga_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+Command: write_bitstream -force top_fpga.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC DPIP-1] Input pipelining: DSP top_digital_inst/CORE/multiplier_0/product input top_digital_inst/CORE/multiplier_0/product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP top_digital_inst/CORE/multiplier_0/product input top_digital_inst/CORE/multiplier_0/product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP top_digital_inst/CORE/multiplier_0/product output top_digital_inst/CORE/multiplier_0/product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP top_digital_inst/CORE/multiplier_0/product multiplier stage top_digital_inst/CORE/multiplier_0/product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/CLK is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/reshi[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/reshi[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/clk_50M_reg is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/op2[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/op2[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/clk_50M_reg_0 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/acc_sel_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/acc_sel_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/clk_50M_reg_1 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/reslo[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/reslo[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/clk_50M_reg_2 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/pmem_dout_bckup[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/pmem_dout_bckup[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/clk_50M_reg_3 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/wdtctl[7]_i_1/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/wdtctl[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/clk_50M_reg_4 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/enable_latch_reg_i_2__23/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/enable_latch_reg_i_2__23. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_1 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/enable_latch_reg_i_2__1/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/enable_latch_reg_i_2__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_10 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r9[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r9[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_11 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r7[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r7[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_12 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r5[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r5[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_13 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r3[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r3[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_14 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r1[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r1[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_15 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r4[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r4[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_16 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r6[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r6[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_17 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r8[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r8[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_18 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r10[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r10[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_19 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r12[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r12[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_20 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r14[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r14[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_21 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/mdb_in_buf[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/mdb_in_buf[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_3 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/inst_sext[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/inst_sext[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_4 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/pc[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/pc[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_5 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/inst_dext[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/inst_dext[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_6 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/mdb_out_nxt[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/mdb_out_nxt[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_7 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r15[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r15[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_8 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r13[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r13[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/clk_50M_reg_9 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r11[15]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r11[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/mclk_irq_num is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/irq_num[3]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/irq_num[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_mclk/mclk_r2 is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r2[8]_i_2/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r2[8]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_smclk/clk_50M_reg is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_smclk/enable_latch_reg_i_2__24/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_smclk/enable_latch_reg_i_2__24. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/CORE/clock_module_0/clock_gate_smclk/wdt_clk_cnt is a gated clock net sourced by a combinational pin top_digital_inst/CORE/clock_module_0/clock_gate_smclk/wdtisx_s[1]_i_1/O, cell top_digital_inst/CORE/clock_module_0/clock_gate_smclk/wdtisx_s[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/clk_divider/CLK is a gated clock net sourced by a combinational pin top_digital_inst/clk_divider/data_sync[1]_i_1__0/O, cell top_digital_inst/clk_divider/data_sync[1]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/clk_divider/aclk is a gated clock net sourced by a combinational pin top_digital_inst/clk_divider/pwm_out_i_2/O, cell top_digital_inst/clk_divider/pwm_out_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net top_digital_inst/clk_divider/cpu_mclk is a gated clock net sourced by a combinational pin top_digital_inst/clk_divider/data_sync[1]_i_1/O, cell top_digital_inst/clk_divider/data_sync[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/acc_sel_i_2 is driving clock pin of 18 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/multiplier_0/acc_sel_reg, top_digital_inst/CORE/multiplier_0/op1_reg[0], top_digital_inst/CORE/multiplier_0/op1_reg[10], top_digital_inst/CORE/multiplier_0/op1_reg[11], top_digital_inst/CORE/multiplier_0/op1_reg[12], top_digital_inst/CORE/multiplier_0/op1_reg[13], top_digital_inst/CORE/multiplier_0/op1_reg[14], top_digital_inst/CORE/multiplier_0/op1_reg[15], top_digital_inst/CORE/multiplier_0/op1_reg[1], top_digital_inst/CORE/multiplier_0/op1_reg[2], top_digital_inst/CORE/multiplier_0/op1_reg[3], top_digital_inst/CORE/multiplier_0/op1_reg[4], top_digital_inst/CORE/multiplier_0/op1_reg[5], top_digital_inst/CORE/multiplier_0/op1_reg[6], top_digital_inst/CORE/multiplier_0/op1_reg[7]... and (the first 15 of 18 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/op2[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/multiplier_0/op2_reg[0], top_digital_inst/CORE/multiplier_0/op2_reg[10], top_digital_inst/CORE/multiplier_0/op2_reg[11], top_digital_inst/CORE/multiplier_0/op2_reg[12], top_digital_inst/CORE/multiplier_0/op2_reg[13], top_digital_inst/CORE/multiplier_0/op2_reg[14], top_digital_inst/CORE/multiplier_0/op2_reg[15], top_digital_inst/CORE/multiplier_0/op2_reg[1], top_digital_inst/CORE/multiplier_0/op2_reg[2], top_digital_inst/CORE/multiplier_0/op2_reg[3], top_digital_inst/CORE/multiplier_0/op2_reg[4], top_digital_inst/CORE/multiplier_0/op2_reg[5], top_digital_inst/CORE/multiplier_0/op2_reg[6], top_digital_inst/CORE/multiplier_0/op2_reg[7], top_digital_inst/CORE/multiplier_0/op2_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/pmem_dout_bckup[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[0], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[10], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[11], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[12], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[13], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[14], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[15], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[1], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[2], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[3], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[4], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[5], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[6], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[7], top_digital_inst/CORE/mem_backbone_0/pmem_dout_bckup_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/reshi[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/multiplier_0/reshi_reg[0], top_digital_inst/CORE/multiplier_0/reshi_reg[10], top_digital_inst/CORE/multiplier_0/reshi_reg[11], top_digital_inst/CORE/multiplier_0/reshi_reg[12], top_digital_inst/CORE/multiplier_0/reshi_reg[13], top_digital_inst/CORE/multiplier_0/reshi_reg[14], top_digital_inst/CORE/multiplier_0/reshi_reg[15], top_digital_inst/CORE/multiplier_0/reshi_reg[1], top_digital_inst/CORE/multiplier_0/reshi_reg[2], top_digital_inst/CORE/multiplier_0/reshi_reg[3], top_digital_inst/CORE/multiplier_0/reshi_reg[4], top_digital_inst/CORE/multiplier_0/reshi_reg[5], top_digital_inst/CORE/multiplier_0/reshi_reg[6], top_digital_inst/CORE/multiplier_0/reshi_reg[7], top_digital_inst/CORE/multiplier_0/reshi_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/reslo[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/multiplier_0/reslo_reg[0], top_digital_inst/CORE/multiplier_0/reslo_reg[10], top_digital_inst/CORE/multiplier_0/reslo_reg[11], top_digital_inst/CORE/multiplier_0/reslo_reg[12], top_digital_inst/CORE/multiplier_0/reslo_reg[13], top_digital_inst/CORE/multiplier_0/reslo_reg[14], top_digital_inst/CORE/multiplier_0/reslo_reg[15], top_digital_inst/CORE/multiplier_0/reslo_reg[1], top_digital_inst/CORE/multiplier_0/reslo_reg[2], top_digital_inst/CORE/multiplier_0/reslo_reg[3], top_digital_inst/CORE/multiplier_0/reslo_reg[4], top_digital_inst/CORE/multiplier_0/reslo_reg[5], top_digital_inst/CORE/multiplier_0/reslo_reg[6], top_digital_inst/CORE/multiplier_0/reslo_reg[7], top_digital_inst/CORE/multiplier_0/reslo_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_dma_mclk/wdtctl[7]_i_1 is driving clock pin of 5 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/watchdog_0/wdtctl_reg[0], top_digital_inst/CORE/watchdog_0/wdtctl_reg[1], top_digital_inst/CORE/watchdog_0/wdtctl_reg[4], top_digital_inst/CORE/watchdog_0/wdtctl_reg[6], and top_digital_inst/CORE/watchdog_0/wdtctl_reg[7]
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/inst_dext[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/frontend_0/inst_dext_reg[0], top_digital_inst/CORE/frontend_0/inst_dext_reg[10], top_digital_inst/CORE/frontend_0/inst_dext_reg[11], top_digital_inst/CORE/frontend_0/inst_dext_reg[12], top_digital_inst/CORE/frontend_0/inst_dext_reg[13], top_digital_inst/CORE/frontend_0/inst_dext_reg[14], top_digital_inst/CORE/frontend_0/inst_dext_reg[15], top_digital_inst/CORE/frontend_0/inst_dext_reg[1], top_digital_inst/CORE/frontend_0/inst_dext_reg[2], top_digital_inst/CORE/frontend_0/inst_dext_reg[3], top_digital_inst/CORE/frontend_0/inst_dext_reg[4], top_digital_inst/CORE/frontend_0/inst_dext_reg[5], top_digital_inst/CORE/frontend_0/inst_dext_reg[6], top_digital_inst/CORE/frontend_0/inst_dext_reg[7], top_digital_inst/CORE/frontend_0/inst_dext_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/inst_sext[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/frontend_0/inst_sext_reg[0], top_digital_inst/CORE/frontend_0/inst_sext_reg[10], top_digital_inst/CORE/frontend_0/inst_sext_reg[11], top_digital_inst/CORE/frontend_0/inst_sext_reg[12], top_digital_inst/CORE/frontend_0/inst_sext_reg[13], top_digital_inst/CORE/frontend_0/inst_sext_reg[14], top_digital_inst/CORE/frontend_0/inst_sext_reg[15], top_digital_inst/CORE/frontend_0/inst_sext_reg[1], top_digital_inst/CORE/frontend_0/inst_sext_reg[2], top_digital_inst/CORE/frontend_0/inst_sext_reg[3], top_digital_inst/CORE/frontend_0/inst_sext_reg[4], top_digital_inst/CORE/frontend_0/inst_sext_reg[5], top_digital_inst/CORE/frontend_0/inst_sext_reg[6], top_digital_inst/CORE/frontend_0/inst_sext_reg[7], top_digital_inst/CORE/frontend_0/inst_sext_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/irq_num[3]_i_2 is driving clock pin of 4 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/frontend_0/irq_num_reg[0], top_digital_inst/CORE/frontend_0/irq_num_reg[1], top_digital_inst/CORE/frontend_0/irq_num_reg[2], and top_digital_inst/CORE/frontend_0/irq_num_reg[3]
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/mdb_in_buf[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[0], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[10], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[11], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[12], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[13], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[14], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[15], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[1], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[2], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[3], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[4], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[5], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[6], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[7], top_digital_inst/CORE/execution_unit_0/mdb_in_buf_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/mdb_out_nxt[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[0], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[10], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[11], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[12], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[13], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[14], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[15], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[1], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[2], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[3], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[4], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[5], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[6], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[7], top_digital_inst/CORE/execution_unit_0/mdb_out_nxt_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/pc[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/frontend_0/pc_reg[0], top_digital_inst/CORE/frontend_0/pc_reg[10], top_digital_inst/CORE/frontend_0/pc_reg[11], top_digital_inst/CORE/frontend_0/pc_reg[12], top_digital_inst/CORE/frontend_0/pc_reg[13], top_digital_inst/CORE/frontend_0/pc_reg[14], top_digital_inst/CORE/frontend_0/pc_reg[15], top_digital_inst/CORE/frontend_0/pc_reg[1], top_digital_inst/CORE/frontend_0/pc_reg[2], top_digital_inst/CORE/frontend_0/pc_reg[3], top_digital_inst/CORE/frontend_0/pc_reg[4], top_digital_inst/CORE/frontend_0/pc_reg[5], top_digital_inst/CORE/frontend_0/pc_reg[6], top_digital_inst/CORE/frontend_0/pc_reg[7], top_digital_inst/CORE/frontend_0/pc_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r10[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r10_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r11[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r11_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r12[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r12_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r13[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r13_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r14[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r14_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r15[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r15_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r1[15]_i_2 is driving clock pin of 15 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[8], and top_digital_inst/CORE/execution_unit_0/register_file_0/r1_reg[9]
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r2[8]_i_2 is driving clock pin of 9 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[7], and top_digital_inst/CORE/execution_unit_0/register_file_0/r2_reg[8]
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r3[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r3_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r4[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r4_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r5[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r5_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r6[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r6_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r7[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r7_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r8[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r8_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_mclk/r9[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[0], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[10], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[11], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[12], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[13], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[14], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[15], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[1], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[2], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[3], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[4], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[5], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[6], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[7], top_digital_inst/CORE/execution_unit_0/register_file_0/r9_reg[8]... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/CORE/clock_module_0/clock_gate_smclk/wdtisx_s[1]_i_1 is driving clock pin of 22 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/watchdog_0/wdt_evt_toggle_reg, top_digital_inst/CORE/watchdog_0/wdtcnt_reg[0], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[10], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[11], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[12], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[13], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[14], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[15], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[1], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[2], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[3], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[4], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[5], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[6], top_digital_inst/CORE/watchdog_0/wdtcnt_reg[7]... and (the first 15 of 22 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/clk_divider/data_sync[1]_i_1 is driving clock pin of 23 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/clock_module_0/dbg_rst_noscan_reg, top_digital_inst/CORE/clock_module_0/sync_cell_dbg_en/data_sync_reg[0], top_digital_inst/CORE/clock_module_0/sync_cell_dbg_en/data_sync_reg[1], top_digital_inst/CORE/clock_module_0/sync_cell_puc/data_sync_reg[0], top_digital_inst/CORE/clock_module_0/sync_cell_puc/data_sync_reg[1], top_digital_inst/CORE/execution_unit_0/mab_lsb_reg, top_digital_inst/CORE/execution_unit_0/mdb_in_buf_en_reg, top_digital_inst/CORE/execution_unit_0/mdb_in_buf_valid_reg, top_digital_inst/CORE/frontend_0/FSM_sequential_e_state_reg[0], top_digital_inst/CORE/frontend_0/FSM_sequential_e_state_reg[1], top_digital_inst/CORE/frontend_0/FSM_sequential_e_state_reg[2], top_digital_inst/CORE/frontend_0/FSM_sequential_e_state_reg[3], top_digital_inst/CORE/frontend_0/FSM_sequential_i_state_reg[0], top_digital_inst/CORE/frontend_0/FSM_sequential_i_state_reg[1], top_digital_inst/CORE/frontend_0/FSM_sequential_i_state_reg[2]... and (the first 15 of 23 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/clk_divider/data_sync[1]_i_1__0 is driving clock pin of 7 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/CORE/watchdog_0/sync_cell_wdtcnt_clr/data_sync_reg[0], top_digital_inst/CORE/watchdog_0/sync_cell_wdtcnt_clr/data_sync_reg[1], top_digital_inst/CORE/watchdog_0/sync_cell_wdtcnt_incr/data_sync_reg[0], top_digital_inst/CORE/watchdog_0/sync_cell_wdtcnt_incr/data_sync_reg[1], top_digital_inst/CORE/watchdog_0/sync_reset_por/data_sync_reg[0], top_digital_inst/CORE/watchdog_0/sync_reset_por/data_sync_reg[1], and top_digital_inst/CORE/watchdog_0/wdtcnt_clr_sync_dly_reg
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT top_digital_inst/clk_divider/pwm_out_i_2 is driving clock pin of 17 cells. This could lead to large hold time violations. Involved cells are:
+top_digital_inst/PWM/counter_reg[0], top_digital_inst/PWM/counter_reg[10], top_digital_inst/PWM/counter_reg[11], top_digital_inst/PWM/counter_reg[12], top_digital_inst/PWM/counter_reg[13], top_digital_inst/PWM/counter_reg[14], top_digital_inst/PWM/counter_reg[15], top_digital_inst/PWM/counter_reg[1], top_digital_inst/PWM/counter_reg[2], top_digital_inst/PWM/counter_reg[3], top_digital_inst/PWM/counter_reg[4], top_digital_inst/PWM/counter_reg[5], top_digital_inst/PWM/counter_reg[6], top_digital_inst/PWM/counter_reg[7], top_digital_inst/PWM/counter_reg[8]... and (the first 15 of 17 listed)
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_data_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_data_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_data_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_bw_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_dest_bin_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_dest_bin_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_dext_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_dext_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_dext_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 top_digital_inst/DATAMEM/mem_reg has an input control pin top_digital_inst/DATAMEM/mem_reg/ADDRARDADDR[14] (net: top_digital_inst/DATAMEM/D[9]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/clock_module_0/sync_cell_cpu_en/data_sync_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/dbg_0/dbg_uart_0/dbg_addr_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_data_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_data_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_data_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_start_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/dbg_0/mem_startb_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_alu_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_alu_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_alu_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/inst_as_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/CORE/frontend_0/pc_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 top_digital_inst/PROGMEM/mem_reg_5 has an input control pin top_digital_inst/PROGMEM/mem_reg_5/ADDRARDADDR[13] (net: top_digital_inst/PROGMEM/ADDRARDADDR[12]) which is driven by a register (top_digital_inst/GPIO/p1ifg_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC ZPS7-1] PS7 block required: The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 112 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./top_fpga.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] '/home/iisclap/Downloads/FPGA_10NOV/FPGA_10NOV.runs/impl_2/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Thu May 20 22:49:11 2021. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+126 Infos, 186 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:33 ; elapsed = 00:00:27 . Memory (MB): peak = 3282.047 ; gain = 337.254 ; free physical = 475 ; free virtual = 3208
+INFO: [Common 17-206] Exiting Vivado at Thu May 20 22:49:11 2021...
